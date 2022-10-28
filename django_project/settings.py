@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
+    "articles.apps.ArticlesConfig",
 ]
 
 MIDDLEWARE = [
@@ -135,4 +136,14 @@ LOGOUT_REDIRECT_URL = "home"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+DEFAULT_FROM_EMAIL = "mdniekamp@gmail.com"
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_HOST_USER = "apikey"
+EMAIL_HOST_PASSWORD = (
+    "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"
+)
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+TIME_ZONE = "America/Boise"

@@ -146,4 +146,4 @@ EMAIL_HOST_PASSWORD = (
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-TIME_ZONE = "America/Boise"
+TIME_ZONE = "America/Denver"
